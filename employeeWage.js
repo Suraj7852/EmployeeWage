@@ -1,15 +1,18 @@
+let IS_PART_TIME = 1;
+let IS_FULL_TIME = 2;
 let EMP_RATE_PER_HOUR = 20;
 
 let empHrs = 0;
 let empWage = 0;
-let isPresent = 1;
 
-let empCheck = Math.floor(Math.random()*2);
-if(empCheck == 1) {
+let empCheck = Math.floor(Math.random()*3);
+if(empCheck == IS_PART_TIME) {
 	console.log("Present");
+	empHrs = 4;
+} else if(empCheck == IS_FULL_TIME) {
 	empHrs = 8;
 } else {
-	console.log("Not Present");
+	console.log("Not present");
 	empHrs = 0;
 }
 
