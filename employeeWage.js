@@ -6,15 +6,16 @@ let empHrs = 0;
 let empWage = 0;
 
 let empCheck = Math.floor(Math.random()*3);
-if(empCheck == IS_PART_TIME) {
-	console.log("Present");
-	empHrs = 4;
-} else if(empCheck == IS_FULL_TIME) {
-	empHrs = 8;
-} else {
-	console.log("Not present");
-	empHrs = 0;
+switch(empCheck) {
+	case IS_PART_TIME:
+		empHrs = 4;
+		break;
+	case IS_FULL_TIME:
+		empHrs = 8;
+		break;
+	default:
+		empHrs = 0;
 }
 
 empWage = empHrs*EMP_RATE_PER_HOUR;
-console.log(empWage);
+console.log(empWage)
